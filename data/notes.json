@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "chips_ahoy"
+    },
+    {
+      "id": 1,
+      "name": "chocolate_brownie"
+    },
+    {
+      "id": 2,
+      "name": "chocolate_chip_cookie_dough"
+    },
+    {
+      "id": 3,
+      "name": "lime"
+    },
+    {
+      "id": 4,
+      "name": "nacho"
+    },
+    {
+      "id": 5,
+      "name": "nilla"
+    },
+    {
+      "id": 6,
+      "name": "nutter_butter"
+    },
+    {
+      "id": 7,
+      "name": "oreo_mini"
+    },
+    {
+      "id": 8,
+      "name": "ritz_cheese"
+    },
+    {
+      "id": 9,
+      "name": "sea_salt"
+    }
+  ],
+  "info": {
+    "year": 2026,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}

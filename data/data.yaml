@@ -1,0 +1,18 @@
+path: C:/Users/mjawe/project_final/data
+
+train: train/images
+val: val/images
+
+nc: 10
+
+names:
+  - chips_ahoy
+  - chocolate_brownie
+  - chocolate_chip_cookie_dough
+  - lime
+  - nacho
+  - nilla
+  - nutter_butter
+  - oreo_mini
+  - ritz_cheese
+  - sea_salt
