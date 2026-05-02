@@ -1,50 +1,61 @@
 classes:
   - name: chips_ahoy
     nutrition:
-      calories_per_serving: 160
-      protein_grams: 2
-
+      calories_per_serving: 140
+      protein_grams: 1
+      sugar_grams: 8
+      carb_grams: 19
   - name: chocolate_brownie
     nutrition:
-      calories_per_serving: 150
-      protein_grams: 20
-
+      calories_per_serving: 190
+      protein_grams: 21
+      sugar_grams: 0
+      carb_grams: 19
   - name: chocolate_chip_cookie_dough
     nutrition:
-      calories_per_serving: 160
-      protein_grams: 20
-
+      calories_per_serving: 190
+      protein_grams: 21
+      sugar_grams: 2
+      carb_grams: 10
   - name: lime
     nutrition:
-      calories_per_serving: 20
-      protein_grams: 0.5
-
+      calories_per_serving: 130
+      protein_grams: 2
+      sugar_grams: 1
+      carb_grams: 20
   - name: nacho
     nutrition:
-      calories_per_serving: 150
+      calories_per_serving: 130
       protein_grams: 2
-
+      sugar_grams: 1
+      carb_grams: 20
   - name: nilla
     nutrition:
       calories_per_serving: 140
-      protein_grams: 2
-
+      protein_grams: 1
+      sugar_grams: 11
+      carb_grams: 21
   - name: nutter_butter
     nutrition:
       calories_per_serving: 140
-      protein_grams: 3
-
+      protein_grams: 2
+      sugar_grams: 8
+      carb_grams: 20
   - name: oreo_mini
     nutrition:
       calories_per_serving: 140
       protein_grams: 1
-
+      sugar_grams: 8
+      carb_grams: 19
   - name: ritz_cheese
-    nutrition:
-      calories_per_serving: 200
-      protein_grams: 4
-
-  - name: sea_salt
     nutrition:
       calories_per_serving: 150
       protein_grams: 2
+      sugar_grams: 4
+      carb_grams: 17
+  - name: sea_salt
+    nutrition:
+      calories_per_serving: 130
+      protein_grams: 2
+      sugar_grams: 1
+      carb_grams: 20

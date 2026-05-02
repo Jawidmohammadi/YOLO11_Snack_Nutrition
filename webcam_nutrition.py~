@@ -31,8 +31,6 @@ while True:
 
     total_calories = 0
     total_protein = 0
-    total_sugar = 0
-    total_carb = 0
     object_count = 0
 
     for box in detections:
@@ -49,13 +47,9 @@ while True:
 
         calories = nutrition_map.get(class_name, {}).get("calories_per_serving", 0)
         protein = nutrition_map.get(class_name, {}).get("protein_grams", 0)
-        sugar = nutrition_map.get(class_name, {}).get("sugar_grams", 0)
-        carb = nutrition_map.get(class_name, {}).get("carb_grams", 0)
 
         total_calories += calories
         total_protein += protein
-        total_sugar += sugar
-        total_carb += carb
 
         label = f"{class_name} {conf:.2f} | {calories} cal"
 
@@ -70,57 +64,18 @@ while True:
             2,
         )
 
-    # cv2.rectangle(frame, (10, 10), (420, 105), (0, 0, 0), -1)
-    # cv2.putText(frame, f"Objects: {object_count}", (20, 40),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Calories: {total_calories}", (20, 70),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Protein: {total_protein}g", (20, 100),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Sugar: {total_sugar}g", (20, 100),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Carbohydrate: {total_carb}g", (20, 100),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-    
-
-
-
-
-
-    overlay = frame.copy()
-
-    # Draw rectangle on overlay
-    cv2.rectangle(overlay, (10, 10), (420, 170), (0, 0, 0), -1)
-
-    # Blend (glass effect)
-    alpha = 0.4
-    cv2.addWeighted(overlay, alpha, frame, 1 - alpha, 0, frame)
-
-    # Text
+    cv2.rectangle(frame, (10, 10), (420, 105), (0, 0, 0), -1)
     cv2.putText(frame, f"Objects: {object_count}", (20, 40),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
     cv2.putText(frame, f"Total Calories: {total_calories}", (20, 70),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
     cv2.putText(frame, f"Total Protein: {total_protein}g", (20, 100),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-
-    cv2.putText(frame, f"Total Sugar: {total_sugar}g", (20, 130),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-
-    cv2.putText(frame, f"Total Carbohydrate: {total_carb}g", (20, 160),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
 
     cv2.imshow("YOLO Snack Nutrition Scanner", frame)
 
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
-
-
-
-
 
 cap.release()
 cv2.destroyAllWindows()
