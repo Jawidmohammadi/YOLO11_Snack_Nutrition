@@ -259,44 +259,6 @@ to quit the application.
 
 ---
 
-# Video Detection and Output
-
-This project also includes a video processing script:
-
-```text
-video_detection.py
-```
-
-This script runs YOLO detection on a saved input video and generates a new annotated output video.
-
-## Example Usage
-
-Make sure the script paths are set correctly inside `video_detection.py`, such as:
-
-```python
-model_path = "runs/detect/train-2/weights/best.pt"
-input_video_path = "input_video.mp4"
-output_video_path = "output_video.mp4"
-```
-
-Then run:
-
-```bash
-python video_detection.py
-```
-
-The script will:
-
-- Load the trained YOLO11 model
-- Read frames from the input video
-- Detect snack objects in each frame
-- Draw bounding boxes, class labels, and confidence scores
-- Add nutrition information if `nutrition_data.yaml` is provided
-- Save the annotated video as `output_video.mp4`
-
-This is useful for generating a final demo video for the project report or presentation.
-
----
 
 # Nutrition Overlay System
 

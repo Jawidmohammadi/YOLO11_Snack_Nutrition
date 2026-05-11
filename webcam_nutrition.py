@@ -70,33 +70,15 @@ while True:
             2,
         )
 
-    # cv2.rectangle(frame, (10, 10), (420, 105), (0, 0, 0), -1)
-    # cv2.putText(frame, f"Objects: {object_count}", (20, 40),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Calories: {total_calories}", (20, 70),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Protein: {total_protein}g", (20, 100),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Sugar: {total_sugar}g", (20, 100),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-    # cv2.putText(frame, f"Total Carbohydrate: {total_carb}g", (20, 100),
-    #             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-    
-
-
-
 
 
     overlay = frame.copy()
 
-    # Draw rectangle on overlay
     cv2.rectangle(overlay, (10, 10), (420, 170), (0, 0, 0), -1)
 
-    # Blend (glass effect)
     alpha = 0.4
     cv2.addWeighted(overlay, alpha, frame, 1 - alpha, 0, frame)
 
-    # Text
     cv2.putText(frame, f"Objects: {object_count}", (20, 40),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
 
@@ -117,8 +99,6 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
-
-
 
 
 
